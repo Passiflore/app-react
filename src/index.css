@@ -15,11 +15,15 @@ body{
     width: 75vw;
     margin: 40px auto;
 }
-
-header h1
+.titleLogo
+{
+  text-align: center;
+}
+.title
 {
   font-size: 38px;
   font-weight:lighter;
+
 
 }
 

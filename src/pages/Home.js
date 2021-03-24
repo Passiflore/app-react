@@ -1,6 +1,8 @@
 import Search from '../components/Search'
 import {useState} from 'react';
 import Navigation from '../components/Navigation'
+import Logo from '../components/Logo';
+import Movies from '../components/Movies';
 
 const Home = () => {
     const [state, setState] = useState({
@@ -21,11 +23,12 @@ const Home = () => {
     return (
         <div className="container">
             <header>
-                <h1>The shrimp cocktail</h1>
+                <Logo />
                 <Navigation  />
             </header>
             <main>
                 <Search handleInput={handleInput} />
+                <Movies />
             </main>
       </div>
 
