@@ -1,25 +1,22 @@
-import logo from './logo.svg';
 import './App.css';
+import Home from "./pages/Home";
+import About from "./pages/About"
+import NotFound from "./pages/NotFound"
+import {BrowserRouter,Switch, Route} from "react-router-dom"
 
+
+// api_key: "2f071489721e98854152263cf924a450"
+// api_URL: "https://api.themoviedb.org/3/movie/550?"
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Switch>
+        <Route path="/" exact component={Home}/>
+        <Route path="/about" exact component={About}/>
+        <Route component={NotFound} />
+      </Switch>
+    </BrowserRouter>
   );
 }
 
-export default App;
+export default App
