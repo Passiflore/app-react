@@ -1,9 +1,9 @@
-import Search from '../components/Search'
+import Search from '../components/Search';
 import {useState} from 'react';
-import Navigation from '../components/Navigation'
+import Navigation from '../components/Navigation';
 import Logo from '../components/Logo';
 import Movies from '../components/Movies';
-
+import Subtitle from '../components/Subtitle';
 const Home = () => {
     const [state, setState] = useState({
         s:"",
@@ -29,6 +29,7 @@ const Home = () => {
             </header>
             <main>
                 <Search handleInput={handleInput} />
+                <Subtitle/>
                 <Movies />
             </main>
       </div>
