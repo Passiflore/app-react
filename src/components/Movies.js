@@ -1,8 +1,7 @@
 import { useEffect, useState, } from 'react';
 import axios from "axios"
 import Card from "./Card"
-
-
+import MovieDetails from '../components/Details';
 
 const Movies = () => {
 
@@ -11,7 +10,7 @@ const Movies = () => {
       });
         const [topRatedMovies, settopRatedMovies] = useState([]);
     
-        const topRatedMovieUrl = 'https://api.themoviedb.org/3/movie/top_rated?api_key=2f071489721e98854152263cf924a450&language=en-US&page=1&include_adult=false'
+        const topRatedMovieUrl = 'https://api.themoviedb.org/3/movie/top_rated?api_key=2f071489721e98854152263cf924a450&language=fr-FR&page=1&include_adult=false'
         const fetchTopRatedMovie = () =>{
           axios(topRatedMovieUrl).then(data =>{ 
             settopRatedMovies(data.data.results)
@@ -24,6 +23,9 @@ const Movies = () => {
             <ul className="moviesList">
                 {topRatedMovies.map((movie) => (
                     <Card movie={movie} key={movie.id}/>
+                ))}
+                {topRatedMovies.map((movie) => (
+                    <MovieDetails movie={movie} key={movie.id}/>
                 ))}
             </ul>
         </div>

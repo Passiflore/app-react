@@ -15,11 +15,11 @@ const Home = () => {
     });
 
 
-    const apiurl = "https://api.themoviedb.org/3/movie/upcoming?api_key=2f071489721e98854152263cf924a450"
+    const apiurl = "https://api.themoviedb.org/3/search/movie?api_key=2f071489721e98854152263cf924a450"
 
     const search =(e) =>{
       if (e.key === "Enter") {
-        axios(apiurl + '&s=' + state.s).then(({data}) =>{
+        axios(apiurl + '&query=' + state.s + '&language=en-US&page=1&include_adult=false').then(({data}) =>{
           let results = data.results
 
           setState(prevState =>{

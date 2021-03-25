@@ -1,10 +1,11 @@
-import React from 'react';
-
+import React, {Component} from 'react';
+import {NavLink} from "react-router-dom";
+import MovieDetails from '../components/Details';
 
 const Card = (props) => {
     const {movie} = props;
     return (
-        <a className="movieCard" href="#moviePopUp">
+        <div className="movieCard" href="#moviePopUp">
             <div className="moviePosterPlace">
 
                 <div className="moviePosterOverlay"></div>
@@ -12,7 +13,7 @@ const Card = (props) => {
                 <img className="moviePoster" src={"https://image.tmdb.org/t/p/w200"+movie.poster_path} alt = "movie poster"></img>
             
 		        <div className="moviePosterOverlayText">
-                    <a className="SeeMore" href="#moviePopUp">Voir plus</a>
+                    <NavLink exact to={"Details?"+movie.id} className="SeeMore">Voir plus</NavLink>
                 </div>
 	        </div>
 
@@ -30,8 +31,7 @@ const Card = (props) => {
                     </div>
                 </div>
             </div>
-
-        </a>
+        </div>
     );
 };
 
