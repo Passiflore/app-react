@@ -4,8 +4,8 @@ import Result from './Result'
 const Results = ({ results }) => {
     return (
         <section className="results">
-            {results.map(result =>(
-                <Result result={result}/>
+            {results.map((result,id)=>(
+                <Result key={id} result={result}/>
             ))}
         </section>
     );

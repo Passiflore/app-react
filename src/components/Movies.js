@@ -5,28 +5,24 @@ import Card from "./Card"
 
 
 const Movies = () => {
-    const [data, setData]= useState([])
-    const [selectedRadio, setSelectedRadio] = useState('')
-    const radios = []
 
-    useEffect(() =>{
-            axios
-            .get(
-                'https://api.themoviedb.org/3/movie/upcoming?api_key=2f071489721e98854152263cf924a450'
-            )
-            .then((res)=> {
-                setData(res.data.results)
-            })
-    }, []);
+    useEffect(() => {
+        fetchTopRatedMovie();
+      });
+        const [topRatedMovies, settopRatedMovies] = useState([]);
     
-
-
-
+        const topRatedMovieUrl = 'https://api.themoviedb.org/3/movie/top_rated?api_key=2f071489721e98854152263cf924a450&language=en-US&page=1&include_adult=false'
+        const fetchTopRatedMovie = () =>{
+          axios(topRatedMovieUrl).then(data =>{ 
+            settopRatedMovies(data.data.results)
+          })
+        }
+    
 
     return (
         <div className="movies">
-            <ul className="moviesList">
-                {data.map((movie) => (
+            <ul className="movies-list">
+                {topRatedMovies.map((movie) => (
                     <Card movie={movie} key={movie.id}/>
                 ))}
             </ul>

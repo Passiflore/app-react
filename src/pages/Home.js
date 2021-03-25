@@ -5,7 +5,6 @@ import {useState} from 'react';
 import Navigation from '../components/Navigation'
 import Logo from '../components/Logo';
 import Movies from '../components/Movies';
-import SearchGendra from '../components/SearchGendra'
 
 const Home = () => {
 
@@ -26,7 +25,7 @@ const Home = () => {
           setState(prevState =>{
             return {...prevState, results: results}
           })
-          console.log(data)
+          console.log(results)
         })
 
       }
@@ -51,7 +50,6 @@ const Home = () => {
             <header>
                 <Logo />
                 <Navigation  />
-                <SearchGendra />
             </header>
             <main>
                 <Search handleInput={handleInput} search={search} />
