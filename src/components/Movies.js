@@ -21,7 +21,7 @@ const Movies = () => {
 
     return (
         <div className="movies">
-            <ul className="movies-list">
+            <ul className="moviesList">
                 {topRatedMovies.map((movie) => (
                     <Card movie={movie} key={movie.id}/>
                 ))}

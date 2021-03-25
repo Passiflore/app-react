@@ -24,8 +24,7 @@ const Card = (props) => {
                     <a class="close" href="#">&times;</a>
                     <div class="movieInformations">
                         <div>Titre original: {movie.original_title}</div>
-                        <div>Note: {movie.rating}</div>
-                    
+                        <div>Note: {movie.vote_average}</div>
                         <div>Date de sortie: {movie.release_date}</div>
                         <div>Synopsis: {movie.overview}</div>
                     </div>

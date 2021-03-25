@@ -2,7 +2,7 @@ import Search from '../components/Search'
 import Results from '../components/Results'
 import axios from 'axios'
 import {useState} from 'react';
-import Navigation from '../components/Navigation'
+import NavBar from '../components/Navigation'
 import Logo from '../components/Logo';
 import Movies from '../components/Movies';
 
@@ -48,10 +48,9 @@ const Home = () => {
     return (
         <div className="container">
             <header>
-                <Logo />
-                <Navigation  />
+                <NavBar  />
             </header>
-            <main>
+            <main className="mainContainer">
                 <Search handleInput={handleInput} search={search} />
                 <Results results={state.results} />
                 <Movies />
