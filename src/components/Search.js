@@ -12,8 +12,6 @@ function Search({ handleInput }){
     )
 }
 
-.form {
-    display:grid; //test du bouton "recherche"
-}
+
 
 export default Search
