@@ -20,6 +20,7 @@ const Home = () => {
         });
         console.log(state.s);
       }
+      
     return (
         <div className="container">
             <header>
