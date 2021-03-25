@@ -56,7 +56,7 @@ const Home = () => {
             <main>
                 <Search handleInput={handleInput} search={search} />
                 <Results results={state.results} />
-                {/* <Movies /> */}
+                <Movies />
             </main>
       </div>
 
