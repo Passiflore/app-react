@@ -19,19 +19,6 @@ const Card = (props) => {
 	        </div>
 
             <p className="movieTitle">{movie.title}</p>
-
-            <div id="moviePopUp" class="overlay">
-                <div className="popup">
-                    <h2 className="movieTitle">{movie.title}</h2>
-                    <a className="close" href="#">&times;</a>
-                    <div className="movieInformations">
-                        <div>Titre original: {movie.original_title}</div>
-                        <div>Note: {movie.vote_average}</div>
-                        <div>Date de sortie: {movie.release_date}</div>
-                        <div>Synopsis: {movie.overview}</div>
-                    </div>
-                </div>
-            </div>
         </div>
     );
 };

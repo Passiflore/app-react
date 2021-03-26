@@ -16,7 +16,7 @@ const MovieDetails = () => {
           setData(res.data))
     },[])
 
-console.log(data)
+
 return(
     <div> 
         <ul>
