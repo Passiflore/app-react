@@ -1,31 +1,23 @@
 import React from 'react';
-import Movies from '../components/Movies';
+import Movies from '../components/Movies'
+import axios from "axios"
 
 const MovieDetails = () => {
-    return (
 
+    var GetMovieId = (window.location.href);
+    const MovieId = GetMovieId.split('?')[1];
+
+    axios("https://api.themoviedb.org/3/movie/"+ MovieId +"?api_key=2f071489721e98854152263cf924a450&language=fr-FR").then(({data}) =>{
+          let results = data.results}
+
+    )
+
+    return(
+        <div>film details</div>
         
-
-
-
-        <div id="moviePopUp" class="overlay">
-                <div class="popup">
-                    <h2 className="movieTitle"></h2>
-                    <a class="close" href="#">&times;</a>
-                    {/*<div class="movieInformations">
-                        <div>Titre original: {original_title}</div>
-                        <div>Note: {vote_average}</div>
-                        <div>Date de sortie: {release_date}</div>
-                        <div>Synopsis: {overview}</div>
-                    </div>*/}
-                </div>
-            </div>
-
     )
 }
 
 export default MovieDetails;
 
-var getMovieId = (window.location.href);
 
-var movieId = getMovieId.split ('?');
