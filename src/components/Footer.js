@@ -7,7 +7,7 @@ import LogoI from '../img/LogoI.svg'
 const footer = () => {
     return (
         <div  className="footer">
-            <p class="social">Nos reseaux</p>
+            <p class="social">Nos réseaux</p>
             <div className="Logo">
                 <img src={LogoF}></img>
                 <img src={LogoI}></img>
