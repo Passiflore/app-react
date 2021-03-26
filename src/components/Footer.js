@@ -2,6 +2,8 @@ import React from 'react';
 import LogoF from '../img/LogoL.svg'
 import LogoI from '../img/LogoI.svg'
 
+//Displaying a simple footer that we can add at the end of our pages
+
 const footer = () => {
     return (
         <div  className="footer">
@@ -16,10 +18,7 @@ const footer = () => {
             </p>
             <p className="footerText2">
                 H2-G2 &#x1F90D;
-            </p>
-       
-
-            
+            </p> 
             
         </div>
     );

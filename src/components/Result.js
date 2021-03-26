@@ -1,6 +1,8 @@
 import React from 'react';
 import {NavLink} from "react-router-dom";
 
+//Disply the results from the input entered in the search bar
+
 const Result = ({result}) => {
     return (
             <div className="movieCard">
@@ -13,8 +15,8 @@ const Result = ({result}) => {
                     <div className="moviePosterOverlayText">
                             <NavLink exact to={"Details?"+result.id} className="SeeMore">Voir plus</NavLink>
                     </div>
-                    <p className="movieTitle">{result.title}</p>
                 </div>
+                <p className="movieTitle">{result.title}</p>
             </div>
     );
 };

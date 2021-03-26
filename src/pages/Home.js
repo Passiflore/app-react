@@ -3,9 +3,10 @@ import Results from '../components/Results'
 import axios from 'axios'
 import {useState} from 'react';
 import NavBar from '../components/Navigation'
-import Logo from '../components/Logo';
 import Movies from '../components/Movies';
 import Footer from '../components/Footer'
+
+//Website homepage
 
 const Home = () => {
 
@@ -14,7 +15,6 @@ const Home = () => {
       results:[],
       selected: {}
     });
-
 
     const apiurl = "https://api.themoviedb.org/3/search/movie?api_key=2f071489721e98854152263cf924a450"
 
@@ -30,13 +30,8 @@ const Home = () => {
         })
 
       }
-
-
     }
 
-
-
-      
       const handleInput = (e) => {
         let s =e.target.value;
     
@@ -64,4 +59,5 @@ const Home = () => {
     )
 
 }
+
 export default Home;

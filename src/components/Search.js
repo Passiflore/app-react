@@ -1,5 +1,6 @@
 import React from 'react'
 
+//Display a search bar
 
 function Search({ handleInput, search }){
     return (

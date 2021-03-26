@@ -1,6 +1,7 @@
-import React, {Component} from 'react';
+import React from 'react';
 import {NavLink} from "react-router-dom";
-import Details from '../components/Details';
+
+//Making every movie card appear, with a "See More" navLink to get to the movie details page
 
 const Card = (props) => {
     const {movie} = props;

@@ -1,5 +1,7 @@
 import React from 'react';
 
+//Notfound page displayed when the website retrieved an incorrect URL
+
 const NotFound = () => {
     return (
         <div>

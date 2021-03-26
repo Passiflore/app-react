@@ -1,8 +1,9 @@
 import React, { useEffect, useState} from 'react';
 import NavBar from '../components/Navigation';
-import Movies from '../components/Movies'
 import axios from "axios"
 
+
+//get the movie ID from the movie Card (in Card.js) and add it in the API adress to get the movie details
 const MovieDetails = () => {
     var GetMovieId = (window.location.href);
     const MovieId = GetMovieId.split('?')[1];
@@ -17,7 +18,7 @@ const MovieDetails = () => {
           setData(res.data))
     },[])
 
-
+//Displaying the Details page according to the movie ID we get in Card page when clicking on a card
 return(
     <div className="container">
     <header>
@@ -33,7 +34,7 @@ return(
                 <p className="detailsListText">Titre original: {data.original_title}</p> 
                 <p className="detailsListText">Date de sortie: {data.release_date}</p> 
                 <p className="detailsListText">Genre: </p> 
-                <p class="detailsSynopsis">Synopsis: {data.overview}</p> 
+                <p class="detailsListText">Synopsis: {data.overview}</p> 
                 <p className="detailsListText">Durée: {data.runtime} minutes</p> 
                 <div className="detailsListText">Site officiel: <a href={data.homepage}>{data.homepage}</a></div>
                 <p className="detailsListText">rating: 	&#x2B50; {data.vote_average} /10</p>
