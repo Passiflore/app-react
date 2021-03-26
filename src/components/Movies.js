@@ -25,6 +25,7 @@ const Movies = () => {
                 {topRatedMovies.map((movie) => (
                     <Card movie={movie} key={movie.id}/>
                 ))}
+                
             </ul>
         </div>
     );
