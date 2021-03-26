@@ -6,7 +6,7 @@ const Card = (props) => {
     const {movie} = props;
 
     return (
-        <div className="movieCard" href="#moviePopUp">
+        <div className="movieCard">
             <div className="moviePosterPlace">
 
                 <div className="moviePosterOverlay"></div>

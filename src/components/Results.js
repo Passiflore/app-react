@@ -3,11 +3,13 @@ import Result from './Result'
 
 const Results = ({ results }) => {
     return (
-        <section className="results">
+    <div className="j">
+        <section className="results moviesList">
             {results.map((result,id)=>(
                 <Result key={id} result={result}/>
             ))}
         </section>
+    </div>
     );
 };
 
