@@ -21,12 +21,24 @@ const Movies = () => {
 
     return (
         <div className="movies">
+<<<<<<< Updated upstream
             <ul className="moviesList">
                 {topRatedMovies.map((movie) => (
                     <Card movie={movie} key={movie.id}/>
                 ))}
                 
             </ul>
+=======
+            <h2>Les films les mieux notés</h2>
+            <div className="moviesList">
+                {topRatedMovies.map((movie) => (
+                    <Card movie={movie} key={movie.id}/>
+                ))}
+                {topRatedMovies.map((movie) => (
+                    <Details movie={movie} key={movie.id}/>
+                ))}
+            </div>
+>>>>>>> Stashed changes
         </div>
     );
 };
