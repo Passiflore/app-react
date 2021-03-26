@@ -13,7 +13,7 @@ const Result = ({result}) => {
                     <div className="moviePosterOverlayText">
                             <NavLink exact to={"Details?"+result.id} className="SeeMore">Voir plus</NavLink>
                     </div>
-                    <h3 className="movieTitle">{result.title}</h3>
+                    <p className="movieTitle">{result.title}</p>
                 </div>
             </div>
     );

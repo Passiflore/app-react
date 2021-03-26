@@ -15,7 +15,7 @@ const footer = () => {
                     The Shrimp Cocktail © 2021 - Tous droits réservés ®
             </p>
             <p className="footerText2">
-                H2-G2
+                H2-G2 &#x1F90D;
             </p>
        
 

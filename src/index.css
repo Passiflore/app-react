@@ -1,20 +1,31 @@
+/******************
+
+      IMPORT
+
+******************/
+
 @font-face {
   font-family: 'Prompt';
   src: local('MyFont'), url(./fonts/Prompt-Bold.ttf) format('truetype');
 }
 
+/*********************
+
+    GLOBAL STYLING
+
+*********************/
+
 *
 {
   margin: 0 auto;
   padding: 0;
-
 }
 
-body{
+body
+{
   background-color:#FFFFFF ;
   color:#26333A;
   font-family: 'Lato', sans-serif;
-
 }
 
 .container
@@ -24,6 +35,12 @@ body{
   width: 100%;
   overflow: hidden;
 }
+
+/*********************
+
+     LOGO STYLING
+
+*********************/
 
 .logo
 {
@@ -37,9 +54,16 @@ body{
 {
   margin-left: 20px;
   font-family: 'Prompt', sans-serif;
+  letter-spacing: 2px;
   Font-size: 32px;
   color:#FFFFFF
 }
+
+/***************************
+
+      NAV BAR STYLING
+
+***************************/
 
 .navigation
 {
@@ -76,49 +100,44 @@ body{
   margin: 0 150px;
 }
 
+/***************************
+
+    SEARCH BAR STYLING
+
+***************************/
+
+.searchBox
+{
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
 .searchInput
 {
-
   width: 100%;
   padding: 15px;
-  margin: 50px 0;
-  
-
-  border-radius: 5px;
+  margin: 50px;
+  border-radius: 10px;
   border: 2px solid #eeeeee;
-
-  letter-spacing: 0.05em;
-  font-size: 20px ;
-  font-weight: 300;
+  letter-spacing: 1px;
+  font-size: 20px;
   color: #aca9a9;
-
   transition: 0.4s ease-out;
-
 } 
 
 .searchInput:focus
 {
   outline: none;
+  box-shadow: 0px 0px 5px 3px #d0d0d0;
   border: 2px solid #eeeeee;
-  box-shadow: 0px 0px 8px 3px #aca9a9;
 }
 
-.movieCard{
-  display: flex;
-  flex-flow: row wrap;
-  align-content: flex-start;
-  justify-content: center;
-  overflow: hidden;
-  width: 200px;
-  height: 400px;
-  margin: 0px 1px 25px 1px;
-}
+/***************************
 
-.moviePoster{
-  width: 100%;
-  height: 300px;
-  border-radius: 15px;
-}
+  CARD PAGE MOVIE OVERLAY
+
+***************************/
 
 .moviePosterPlace{
   position: relative;
@@ -156,35 +175,47 @@ body{
 
 .moviePosterOverlayText a{
   color: #ffffff;
-  font-weight: 500;
-  letter-spacing: 0.15em;
-  margin-bottom: 0.5em;
+  letter-spacing: 2px;
   text-transform: uppercase;
 }
 
-.movieTitle{
+/*****************************
+
+  CARD PAGE MOVIE CARD STYLE
+
+*****************************/
+
+.movieCard{
   display: flex;
   flex-flow: row wrap;
   align-content: flex-start;
   justify-content: center;
+  overflow: hidden;
+  width: 200px;
+  margin: 0px 1px 50px 1px;
+}
+
+.moviePoster{
+  width: 100%;
+  border-radius: 15px;
+}
+
+.movieTitle{
   font-size: 18px;
   text-align: center;
 }
 
 .movies h2
 {
-  
   font-family: 'Prompt', sans-serif;
   font-size: 32px;
   margin-bottom: 25px;
 }
 
 .moviesList{
-  background: #00000;
   display : flex;
   flex-flow: row wrap;
   justify-content: space-between;
-  width : 100%;
 }
 
 /********************
@@ -193,57 +224,6 @@ body{
 
 ********************/
 
-.overlay
-{
-  z-index: 1;
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: rgba(0, 0, 0, 0.8);
-  transition: opacity 300ms;
-  visibility: hidden;
-  overflow: hidden;
-  opacity: 0;
-}
-
-.overlay:target
-{
-  visibility: visible;
-  opacity: 1;
-}
-
-/*********************
-
-        FOOTER
-
-*********************/
-.footer{
-  background: #26333A;
-  color: #FFFFFF;
-  width: 100%;
-  height: 220px;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-}
-.footerText2{
-  font-size: 14px;
-  margin-top: 5px;
-}
-
-.social {
-  padding-top: 15px;
-  font-size: 30px;
-
-}
-
-.Logo img{
-  width: 60px;
-  margin: 20px 15px;
-
-}
 
 /*********************
 
@@ -287,4 +267,306 @@ body{
     align-content: space-around;
     align-items: space-around;
     overflow: hidden;
+}
+
+/******************
+
+      IMPORT
+
+******************/
+
+@font-face {
+  font-family: 'Prompt';
+  src: local('MyFont'), url(./fonts/Prompt-Bold.ttf) format('truetype');
+}
+
+/*********************
+
+    GLOBAL STYLING
+
+*********************/
+
+*
+{
+  margin: 0 auto;
+  padding: 0;
+}
+
+body
+{
+  background-color:#FFFFFF ;
+  color:#26333A;
+  font-family: 'Lato', sans-serif;
+}
+
+.container
+{
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+/*********************
+
+     LOGO STYLING
+
+*********************/
+
+.logo
+{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.logoTitle
+{
+  margin-left: 20px;
+  font-family: 'Prompt', sans-serif;
+  letter-spacing: 2px;
+  Font-size: 32px;
+  color:#FFFFFF
+}
+
+/***************************
+
+      NAV BAR STYLING
+
+***************************/
+
+.navigation
+{
+  display : flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  width: 100%;
+  padding: 20px; 
+  background: #26333A;
+}
+
+.navActive 
+{
+  margin: 0px 30px 0px 0px; 
+  color: #26333A;
+  text-decoration : none;
+  border-radius: 10px;
+  background: #FFFFFF;
+  padding: 20px 40px;
+}
+
+.navActive:hover 
+{
+  transition-duration: 0.40s;
+  background: #4e6571;
+  color: #FFFFFF;
+}
+
+.mainContainer
+{
+  margin: 0 150px;
+}
+
+/***************************
+
+    SEARCH BAR STYLING
+
+***************************/
+
+.searchBox
+{
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+.searchInput
+{
+  width: 100%;
+  padding: 15px;
+  margin: 50px;
+  border-radius: 10px;
+  border: 2px solid #eeeeee;
+  letter-spacing: 1px;
+  font-size: 20px;
+  color: #aca9a9;
+  transition: 0.4s ease-out;
+} 
+
+.searchInput:focus
+{
+  outline: none;
+  box-shadow: 0px 0px 5px 3px #d0d0d0;
+  border: 2px solid #eeeeee;
+}
+
+/***************************
+
+  CARD PAGE MOVIE OVERLAY
+
+***************************/
+
+.moviePosterPlace{
+  position: relative;
+  overflow: hidden;
+}
+
+.moviePosterPlace .moviePosterOverlay{
+  position: absolute;
+  height: 99%;
+  width: 100%;
+  transition: all 0.4s ease-in-out 0s;
+  border-radius: 15px;
+}
+
+.moviePosterPlace:hover .moviePosterOverlay{
+  background: rgba(0,0,0,0.7);
+  opacity: 1;
+}
+
+.moviePosterOverlayText{
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  transition: all 0.4s ease-in-out 0s;
+}
+
+.moviePosterPlace:hover .moviePosterOverlayText{
+  transition-duration: 0.30s;
+  top: 50%;
+  left: 50%;
+  opacity: 1;
+}
+
+.moviePosterOverlayText a{
+  color: #ffffff;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/*****************************
+
+  CARD PAGE MOVIE CARD STYLE
+
+*****************************/
+
+.movieCard{
+  display: flex;
+  flex-flow: row wrap;
+  align-content: flex-start;
+  justify-content: center;
+  overflow: hidden;
+  width: 200px;
+  margin: 0px 1px 50px 1px;
+}
+
+.moviePoster{
+  width: 100%;
+  border-radius: 15px;
+}
+
+.movieTitle{
+  font-size: 18px;
+  text-align: center;
+}
+
+.movies h2
+{
+  font-family: 'Prompt', sans-serif;
+  font-size: 32px;
+  margin-bottom: 25px;
+}
+
+.moviesList{
+  display : flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+/********************
+
+  CARD PAGE OVERLAY
+
+********************/
+
+
+/*********************
+
+   DETAILS PAGE CSS
+
+*********************/
+
+.detailsContainer
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: space-around;
+    align-items: space-around;
+    overflow: hidden;
+    margin: 50px 200px;
+    background-color: #ffffff;
+}
+
+.detailsContainer .detailsMainTitle
+{
+    font-size: 32px;
+    margin-bottom: 50px;
+}
+
+.detailsList
+{
+    padding: 0 50px;
+}
+
+.detailsListText
+{
+    margin: 10px 0;
+}
+
+.detailsMovieContainer
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: space-around;
+    align-items: space-around;
+    overflow: hidden;
+}
+
+/*********************
+
+        FOOTER
+
+*********************/
+.footer{
+  background: #26333A;
+  color: #FFFFFF;
+  width: 100%;
+  height: 220px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.footerText2{
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.social {
+  padding-top: 15px;
+  font-size: 30px;
+
+}
+
+.Logo img{
+  width: 60px;
+  margin: 20px 15px;
+
 }
