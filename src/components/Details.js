@@ -31,13 +31,12 @@ return(
                 <img className="detailsMoviePoster" src={"https://image.tmdb.org/t/p/w200"+data.poster_path} alt = "movie poster"></img>
             </div> 
             <div className="detailsList">
-                <p className="detailsListText">Titre original: {data.original_title}</p> 
-                <p className="detailsListText">Date de sortie: {data.release_date}</p> 
-                <p className="detailsListText">Genre: </p> 
-                <p class="detailsListText">Synopsis: {data.overview}</p> 
-                <p className="detailsListText">Durée: {data.runtime} minutes</p> 
-                <div className="detailsListText">Site officiel: <a href={data.homepage}>{data.homepage}</a></div>
-                <p className="detailsListText">rating: 	&#x2B50; {data.vote_average} /10</p>
+                <p className="detailsListText"><span>Titre original:</span>{data.original_title}</p> 
+                <p className="detailsListText"><span>Date de sortie: </span>{data.release_date}</p>  
+                <p class="detailsListText"><span>Synopsis:</span>{data.overview}</p> 
+                <p className="detailsListText"><span>Durée:</span> {data.runtime} minutes</p> 
+                <div className="detailsListText"><span>Site officiel:</span> <a href={data.homepage}>{data.homepage}</a></div>
+                <p className="detailsListText"><span>Rating:</span> &#x2B50; {data.vote_average} /10</p>
             </div>
         </main>
     </div>
