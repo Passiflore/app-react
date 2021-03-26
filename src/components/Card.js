@@ -1,9 +1,10 @@
 import React, {Component} from 'react';
 import {NavLink} from "react-router-dom";
-import MovieDetails from '../components/Details';
+import Details from '../components/Details';
 
 const Card = (props) => {
     const {movie} = props;
+
     return (
         <div className="movieCard" href="#moviePopUp">
             <div className="moviePosterPlace">

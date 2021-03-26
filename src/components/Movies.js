@@ -1,6 +1,7 @@
 import { useEffect, useState, } from 'react';
 import axios from "axios"
 import Card from "./Card"
+import Details from "./Details"
 
 const Movies = () => {
 
@@ -23,6 +24,9 @@ const Movies = () => {
             <ul className="moviesList">
                 {topRatedMovies.map((movie) => (
                     <Card movie={movie} key={movie.id}/>
+                ))}
+                {topRatedMovies.map((movie) => (
+                    <Details movie={movie} key={movie.id}/>
                 ))}
             </ul>
         </div>

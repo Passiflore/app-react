@@ -3,7 +3,7 @@ import Home from "./pages/Home";
 import About from "./pages/About"
 import NotFound from "./pages/NotFound"
 import {BrowserRouter,Switch, Route} from "react-router-dom"
-import MovieDetails from "./components/Details";
+import Details from "./components/Details";
 
 
 function App() {
@@ -12,7 +12,7 @@ function App() {
       <Switch>
         <Route path="/" exact component={Home}/>
         <Route path="/about" exact component={About}/>
-        <Route path="/details" exact component={MovieDetails}/>
+        <Route path="/details" exact component={Details}/>
         <Route component={NotFound} />
       </Switch>
     </BrowserRouter>
