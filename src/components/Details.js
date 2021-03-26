@@ -2,7 +2,6 @@ import React, { useEffect, useState} from 'react';
 import NavBar from '../components/Navigation';
 import Movies from '../components/Movies'
 import axios from "axios"
-import "./details.css"
 
 const MovieDetails = () => {
     var GetMovieId = (window.location.href);
@@ -36,7 +35,7 @@ return(
                 <p className="detailsListText">Genre: </p> 
                 <p class="detailsSynopsis">Synopsis: {data.overview}</p> 
                 <p className="detailsListText">Durée: {data.runtime} minutes</p> 
-                <p className="detailsListText">Official website: {data.homepage}</p>
+                <div className="detailsListText">Site officiel: <a href={data.homepage}>{data.homepage}</a></div>
                 <p className="detailsListText">rating: 	&#x2B50; {data.vote_average} /10</p>
             </div>
         </main>
