@@ -20,7 +20,7 @@ const Card = (props) => {
 	        </div>
 
             <div className="movieTitle">{movie.title}</div>
-            <div className="movieTitle">Sortie: {movie.release_date}</div>
+            <div className="movieTitle"><span>Sortie:</span> {movie.release_date}</div>
         </div>
     );
 };
