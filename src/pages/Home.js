@@ -5,6 +5,7 @@ import {useState} from 'react';
 import NavBar from '../components/Navigation'
 import Logo from '../components/Logo';
 import Movies from '../components/Movies';
+import Carrousel from '../components/Carrousel';
 
 const Home = () => {
 
